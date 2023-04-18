@@ -28,12 +28,20 @@
                 <button class="tip-btn">15%</button>
                 <button class="tip-btn">25%</button>
                 <button class="tip-btn">50%</button>
-                <input type="number" id="custom-tip" placeholder="Custom" />
+                <input
+                  type="number"
+                  id="custom-tip"
+                  placeholder="Custom"
+                  value="0"
+                />
               </div>
             </div>
 
             <div class="people-div">
-              <label for="people">Number of People</label>
+              <div class="validation-div">
+                <label for="people">Number of People</label>
+                <p id="validation-p">Can’t be zero</p>
+              </div>
               <input type="number" id="people-input" />
             </div>
           </div>
@@ -61,6 +69,6 @@
       </div>
     </main>
 
-    <script src="./script/script.js" defer></script>
+    <script src="./script/script.js"></script>
   </body>
 </html>

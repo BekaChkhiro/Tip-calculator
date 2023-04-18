@@ -1,6 +1,6 @@
 const billInput = document.getElementById("bill-input");
-const tips = document.getElementsByClassName("tip-buttons");
-const tipsArray = [...tips];
+const tips = document.getElementsByClassName("tip-btn");
+const tipsArray = tips;
 const peopleInput = document.getElementById("people-input");
 const total = document.getElementById("total");
 const tipAmount = document.getElementById("tip-amount");
@@ -20,11 +20,6 @@ billInput.addEventListener("input", (event) => {
     calculate();
 })
 
-//tip value 
-// tipsArray.addEventListener("click", (event) => {
-//     tipsValue = parseInt(event.target.innerText);
-//     console.log(tipsValue);
-// })
 
 for (let i = 0; i < tipsArray.length; i++) {
     tipsArray[i].addEventListener("click", (event) => {
@@ -34,18 +29,28 @@ for (let i = 0; i < tipsArray.length; i++) {
     })
 }
 
+
 // custom tip value 
 customTip.addEventListener("input", (event) => {
-    tipsValue = parseInt(event.target.value);
     console.log(tipsValue);
-    calculate();
+    if (customTip.value) {
+        tipsValue = parseInt(event.target.value);
+        calculate();
+    } 
 })
 
 //people input 
 peopleInput.addEventListener("input", (event) => {
-    peopleInputValue = parseInt(event.target.value);
+    if (peopleInput.value == 0) {
+        document.getElementById("validation-p").style.display = "block";
+    } else {
+        peopleInputValue = parseInt(event.target.value);
+        document.getElementById("validation-p").style.display = "none";
+     }
+    
     console.log(peopleInputValue);
     calculate();
+    
 })
 
 //reset button 
@@ -61,6 +66,7 @@ resetBtn.addEventListener("click", (event) => {
     billInput.value = "";
     peopleInput.value = "";
     customTip.value = "";
+    document.getElementById("validation-p").style.display = "none";
 
 })
 
@@ -75,6 +81,4 @@ function calculate () {
         total.innerText = `$${totalValue}`;
         tipAmount.innerText = `$${tipAmountValue}`;
     }
-
-    
 }

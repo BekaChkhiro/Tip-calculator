@@ -107,6 +107,10 @@ label {
     cursor: pointer;
 }
 
+.haime {
+    background-color: red;
+}
+
 #custom-tip {
     width: 107px;
     padding: 6px 17.33px 6px 19px;
@@ -136,6 +140,19 @@ label {
     display: flex;
     flex-direction: column;
     gap: 6px;
+}
+
+.validation-div {
+    display: flex;
+    justify-content: space-between;
+}
+
+#validation-p {
+    color: #E17457;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 23.7px;
+    display: none;
 }
 
 #people-input {
