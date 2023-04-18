@@ -1,0 +1,88 @@
+@media screen and (min-width: 1440px) {
+    main {
+        height: 100vh;
+    }
+
+    .main-calculator-div {
+        margin: 0px;
+    }
+
+    .calculator-div {
+        width: 856px;
+        flex-direction: row;
+        gap: 48px;
+        justify-content: center;
+    }
+
+    /* calculator */
+
+    .calculator {
+        gap: 40px;
+    }
+
+    /* bill input */
+
+    #bill-input {
+        width: 361.52px;
+    }
+
+    #bill-input:hover {
+        border: #26C2AE solid 2px;
+        padding: 4px 13.48px 4px 0px;
+    } 
+
+    /* tips */
+
+    .tip-btn {
+        width: 117px;
+    }
+
+    .tip-buttons {
+        width: 379px;
+        gap: 16px 14px;
+    }
+
+    #custom-tip {
+        width: 88px;
+        padding: 6px 15px 6px 14px;
+    }
+
+    /* people input */
+
+    #people-input {
+        width: 361.52px;
+    }
+
+    /* result */
+
+    .result {
+        width: 333px;
+        padding: 40px;
+        justify-content: space-between;
+    }
+
+    .result-div {
+        gap: 25px;
+    }
+
+    .tip-amount, .total-div {
+        width: 333px;
+    }
+
+    #tip-amount, #total {
+        color: #26C2AE;
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 71.09px;
+        letter-spacing: -1px;
+        text-align: right;
+    }
+    
+    #reset {
+        width: 333px!important;
+    }
+
+    #reset:hover {
+        background-color: #9FE8DF;
+    } 
+}
