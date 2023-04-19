@@ -107,8 +107,9 @@ label {
     cursor: pointer;
 }
 
-.haime {
-    background-color: red;
+.btn-active {
+    background-color: #9FE8DF;
+    color: #00474B;
 }
 
 #custom-tip {
@@ -127,7 +128,7 @@ label {
 }
 
 #custom-tip::placeholder {
-    color: #547878;
+    color: #00474B;
     font-size: 24px;
     font-weight: 700;
     line-height: 38.54px;
@@ -232,4 +233,8 @@ label {
     line-height: 29.62px;
     text-align: center;
     cursor: pointer;
+}
+
+.reset-btn {
+    background-color: red;
 }

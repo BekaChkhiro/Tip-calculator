@@ -1,6 +1,7 @@
 const billInput = document.getElementById("bill-input");
 const tips = document.getElementsByClassName("tip-btn");
 const tipsArray = tips;
+const buttonActive = [...tips];
 const peopleInput = document.getElementById("people-input");
 const total = document.getElementById("total");
 const tipAmount = document.getElementById("tip-amount");
@@ -24,15 +25,33 @@ billInput.addEventListener("input", (event) => {
 for (let i = 0; i < tipsArray.length; i++) {
     tipsArray[i].addEventListener("click", (event) => {
         tipsValue = parseInt(event.target.innerText);
-        console.log(tipsValue);
+        // console.log(tipsValue);
         calculate();
     })
 }
 
 
+let active = null;
+
+buttonActive.forEach((item) => {
+    item.addEventListener("click", () => {
+        if (item == active) {
+            item.classList.remove('btn-active');
+            active = null;
+        } else {
+            if (active != null) {
+                item.classList.remove('btn-active');
+                active = null;
+            }
+            item.classList.add('btn-active');
+            active = item;
+        }
+    })
+})
+
+
 // custom tip value 
 customTip.addEventListener("input", (event) => {
-    console.log(tipsValue);
     if (customTip.value) {
         tipsValue = parseInt(event.target.value);
         calculate();
